@@ -1,0 +1,9 @@
+export const DEFAULT_ASSUMPTIONS = {
+    ANNUAL_RETURN: 0.07,
+    ANNUAL_INFLATION: 0.03,
+    LIFE_EXPECTANCY: 90,
+    MAX_SIM_YEARS: 120
+  };
+  
+  export const MONTHS_IN_YEAR = 12;
+  
