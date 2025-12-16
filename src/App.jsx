@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Inputs from "./components/Inputs";
 import Result from "./components/Result";
 import { runProjection } from "./engine/projection";
+import Timeline from "./components/TimeLine";
 
 export default function App() {
   const [inputs, setInputs] = useState({
@@ -39,6 +40,11 @@ export default function App() {
 
         <Inputs values={inputs} onChange={handleChange} />
         <Result result={result} />
+        <Timeline
+        currentAge={inputs.currentAge}
+        runOutAge={result?.runOutAge}
+        ranOut={result?.ranOut}
+        />
 
         <footer className="text-center text-zinc-600 text-sm pt-10">
           <p>Built with fear and hope. Assumptions: 7% annual returns, 3% inflation.</p>
