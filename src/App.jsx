@@ -4,6 +4,7 @@ import Result from "./components/Result";
 import { runProjection } from "./engine/projection";
 import Timeline from "./components/TimeLine";
 import ScenarioSpending from "./components/ScenarioSpending";
+import ScenarioSavings from "./components/ScenarioSavings";
 
 export default function App() {
   const [inputs, setInputs] = useState({
@@ -51,11 +52,15 @@ export default function App() {
         baseResult={result}
         />
 
-        
-        <footer className="text-center text-zinc-600 text-sm pt-10">
-          <p>Built with fear and hope. Assumptions: 7% annual returns, 3% inflation.</p>
-          <p>Not financial advice. Consult a professional.</p>
-        </footer>
+      <ScenarioSavings
+      inputs={inputs}
+      baseResult={result}
+      />
+
+      <footer className="text-center text-zinc-600 text-sm pt-10">
+        <p>Built with fear and hope. Assumptions: 7% annual returns, 3% inflation.</p>
+        <p>Not financial advice. Consult a professional.</p>
+      </footer>
       </div>
     </main>
   );
