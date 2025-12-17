@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { runProjection } from "../engine/projection";
 
-export default function ScenarioSavings({ inputs, baseResult }) {
+export default function ScenarioSavings({ inputs, baseResult, onScenarioResult }) {
   const [extraSavings, setExtraSavings] = useState(0);
   const [scenarioResult, setScenarioResult] = useState(null);
 
@@ -13,6 +13,10 @@ export default function ScenarioSavings({ inputs, baseResult }) {
 
     const result = runProjection(scenarioInputs);
     setScenarioResult(result);
+
+    if (typeof onScenarioResult === "function") {
+      onScenarioResult(result);
+    }
   }, [extraSavings, inputs]);
 
   if (!baseResult || !scenarioResult) return null;

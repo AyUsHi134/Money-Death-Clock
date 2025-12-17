@@ -101,7 +101,7 @@ export default function ScenarioSpending({ inputs, baseResult }) {
                 outline: 'none'
               }}
             />
-            <style jsx>{`
+            <style>{`
               input[type="range"]::-webkit-slider-thumb {
                 appearance: none;
                 width: 24px;
