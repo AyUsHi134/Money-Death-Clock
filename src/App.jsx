@@ -34,7 +34,7 @@ export default function App() {
           w-full
           px-6
           pt-16
-          pb-24
+          pb-16
           bg-gradient-to-b
           from-[#3a1e14]
           via-[#2a160f]
@@ -83,7 +83,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-12 gap-8 pb-20">
           <aside className="hidden xl:block col-span-2" />
 
-          <div className="col-span-12 xl:col-span-8 space-y-10">
+          <div className="col-span-12 xl:col-span-8 space-y-8">
             <Result result={result} />
 
             <Timeline
